@@ -6,7 +6,7 @@ Concurrency Models
 	
 	New functional programming parallelism
 		- Fork and Join framework in Java 7
-		- the collection streams API in Java 8.
+		- the collections streams API in Java 8.
 	
 	
 	

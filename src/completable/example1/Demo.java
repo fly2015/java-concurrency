@@ -5,7 +5,7 @@
  * Zürich
  * All rights reserved.
  */
-package completable;
+package completable.example1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,7 +28,7 @@ public class Demo
 {
     public static void main(String[] args) throws InterruptedException
     {
-     // Input: A list of persons
+        // Input: A list of persons
         List<Person> personList = new ArrayList<Person>();
         for (int i=0; i<=10; i++)
         {

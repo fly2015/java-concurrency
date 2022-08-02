@@ -5,7 +5,7 @@
  * Zürich
  * All rights reserved.
  */
-package completable;
+package completable.example1;
 
 import java.util.ArrayList;
 import java.util.Collections;
