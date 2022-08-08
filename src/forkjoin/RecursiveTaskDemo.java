@@ -68,7 +68,6 @@ class MyRecursiveTask extends RecursiveTask<Long>
         }
     }
 
-
     private List<MyRecursiveTask> createSubtasks()
     {
         List<MyRecursiveTask> subtasks = new ArrayList<MyRecursiveTask>();
