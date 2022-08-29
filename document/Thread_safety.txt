@@ -1,0 +1,8 @@
+- Class constructors and static/instance initializers are guaranteed to be atomically executed
+
+	private static final FOO INSTANCE = new FOO;
+	private static final FOO INSTANCE;
+	
+	static{
+	    INSTANCE = new FOO();
+	}

@@ -1,5 +1,5 @@
 Concurrency Models
-	1. shared state concurrency model: multiple threads executing within the same application would also share objects
+	1. shared state example model: multiple threads executing within the same application would also share objects
 	2. shared nothing/separate state
 	Netty, Vert.x and Play / Akka and Qbit 
 	LMax Disrupter
