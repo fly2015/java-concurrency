@@ -45,11 +45,13 @@ public class SynchronizeRule
     public static void main(String[] args)
     {
 
+        // Lock on class
         Thread th0 = new Thread(() -> setStaticField(10));
         Thread th1 = new Thread(() -> System.out.println(getStaticField()));
         th0.start();
         th1.start();
         
+        // Lock on an instance
         SynchronizeRule instance0 = new SynchronizeRule();
         Thread th2 = new Thread(() -> instance0.setNonstaticField(20));
         Thread th3 = new Thread(() -> System.out.println(instance0.getNonstaticField()));

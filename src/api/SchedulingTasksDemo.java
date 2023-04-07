@@ -8,10 +8,12 @@
 package api;
 
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.IntStream;
 
 /**
  * 
@@ -35,6 +37,8 @@ public class SchedulingTasksDemo
         
         //
         newSingleThreadScheduledExecutor.scheduleWithFixedDelay(() -> System.out.println(Integer.MAX_VALUE), 0, 1000, TimeUnit.MILLISECONDS);
+    
+        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
     }
 }
 

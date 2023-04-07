@@ -21,7 +21,7 @@ public class CountUsingSynchronizationSameObject
     private static int count = 0;
     private static final Object object = new Object();
 
-    public  void increaseCount()
+    public void increaseCount()
     {
         synchronized(object)
         {

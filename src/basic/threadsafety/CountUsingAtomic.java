@@ -40,10 +40,11 @@ public class CountUsingAtomic
         
         executorService.shutdown();
         
-        boolean terminated = executorService.isTerminated();
-        while (!terminated)
+        //boolean terminated = executorService.isTerminated();
+        while (!executorService.isTerminated())
         {
-            terminated = executorService.isTerminated();
+            //terminated = executorService.isTerminated();
+            System.out.println(executorService.isTerminated());
         }
         
         System.out.println("The final result: " + countUsingAtomic.count);
