@@ -1,9 +1,9 @@
 /*
  * CountDownLatchDemo.java
  *
- * Copyright by CRIF AG
- * Zürich
- * All rights reserved.
+ * Copyright by Hien Ng
+ * Da Nang
+
  */
 package coundownlatch;
 

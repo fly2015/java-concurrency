@@ -1,9 +1,9 @@
 /*
  * ThreadPollingWithInterrupt.java
  *
- * Copyright by CRIF AG
- * Zürich
- * All rights reserved.
+ * Copyright by Hien Ng
+ * Da Nang
+
  */
 package basic.threads;
 
@@ -24,7 +24,7 @@ public class ThreadPollingWithInterrupt
             {
                 counter++;
             }
-            mainThread.interrupt();
+            mainThread.interrupt();// Trigger main thread that is sleeping to wake up. Since the work is done.
         }).start();
         
         while (counter < Integer.MAX_VALUE)
