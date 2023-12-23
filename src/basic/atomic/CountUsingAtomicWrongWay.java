@@ -5,7 +5,7 @@
  * Da Nang
 
  */
-package basic.threadsafety;
+package basic.atomic;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -17,24 +17,24 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author nhqhien
  * @version $Revision:  $
  */
-public class CountUsingAtomic
+public class CountUsingAtomicWrongWay
 {
     private AtomicInteger count = new AtomicInteger(0);
     
     public void increaseCount()
     {
-        System.out.println(count.incrementAndGet());
+        System.out.println(count.getAndSet(count.getAndIncrement()));
     }
     
     
     public static void main(String[] args)
     {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
-        CountUsingAtomic  countUsingAtomic = new CountUsingAtomic();
-        for (int i = 1; i <= 10; i++)
+        CountUsingAtomicWrongWay  countUsingAtomicWrongWay = new CountUsingAtomicWrongWay();
+        for (int i = 1; i <= 1000; i++)
         {
             executorService.submit(() -> {
-                countUsingAtomic.increaseCount();
+                countUsingAtomicWrongWay.increaseCount();
             });
         }
         
@@ -44,10 +44,10 @@ public class CountUsingAtomic
         while (!executorService.isTerminated())
         {
             //terminated = executorService.isTerminated();
-            System.out.println(executorService.isTerminated());
+            //System.out.println(executorService.isTerminated());
         }
         
-        System.out.println("The final result: " + countUsingAtomic.count);
+        System.out.println("The final result: " + countUsingAtomicWrongWay.count);
     }
 }
 

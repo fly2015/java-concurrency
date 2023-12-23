@@ -18,7 +18,7 @@ import java.util.concurrent.Executors;
  */
 public class CountUsingMethodSynchronization
 {
-    private volatile static int count = 0;
+    private static int count = 0;
     public synchronized void increaseCount()
     {
         System.out.println(count++);
@@ -29,7 +29,7 @@ public class CountUsingMethodSynchronization
     {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         CountUsingMethodSynchronization  counter = new CountUsingMethodSynchronization();
-        for (int i = 1; i <= 10; i++)
+        for (int i = 1; i <= 1000; i++)
         {
             executorService.submit(() -> {
                 counter.increaseCount();

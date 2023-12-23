@@ -25,9 +25,10 @@ public class SynchronizationReadWriteReference
         new Thread(() -> readWrite.increase()).start();
         new Thread(() -> readWrite.increase()).start();
         new Thread(() -> readWrite.increase()).start();
-        new Thread(() -> readWrite.increase()).start();
-        
-       Thread.currentThread().join();
+        final Thread thread = new Thread(() -> readWrite.increase());
+        thread.start();
+        thread.join();
+       //Thread.currentThread().join();
        System.out.println(readWrite.readCurrentValue());
     }
 }
@@ -51,10 +52,12 @@ class ReadWriteObject
          * }
          */
         count++;
+        System.out.println(Thread.currentThread().getName() + " Running Write");
     }
     
     public float readCurrentValue()
     {
+        System.out.println(Thread.currentThread().getName() + " Running Read");
         return count;
     }
 }

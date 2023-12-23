@@ -74,6 +74,7 @@ class Baby
 
     public void getTrain(Train train)
     {
+        System.out.println(Thread.currentThread().getName() + " - The baby " + this.name + " is trying to hold the Train");
         synchronized (train)
         {
             System.out.println(Thread.currentThread().getName() + " - The baby " + this.name + " is holding the Train");
