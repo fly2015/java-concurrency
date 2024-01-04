@@ -1,8 +1,8 @@
 /*
  * ManipulationWithList.java
  *
- * Copyright by CRIF AG
- * Zürich
+ * Da Nang, Viet Nam
+ * Da Nang, Viet Nam
  * All rights reserved.
  */
 package paralellstream;

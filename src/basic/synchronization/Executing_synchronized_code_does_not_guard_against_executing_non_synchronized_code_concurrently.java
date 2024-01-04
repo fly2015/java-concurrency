@@ -1,8 +1,8 @@
 /*
  * Executing_synchronized_code_does_not_guard_against_executing_non_synchronized_code_concurrently.java
  *
- * Copyright by CRIF AG
- * Zürich
+ * Da Nang, Viet Nam
+ * Da Nang, Viet Nam
  * All rights reserved.
  */
 package basic.synchronization;
@@ -21,6 +21,7 @@ public class Executing_synchronized_code_does_not_guard_against_executing_non_sy
         try
         {
             Thread.currentThread().sleep(5000);
+            System.out.println(Thread.currentThread().getName() + " increasing count Sleeping");
         }
         catch (InterruptedException e)
         {
@@ -43,10 +44,10 @@ public class Executing_synchronized_code_does_not_guard_against_executing_non_sy
         Thread th1 = new Thread(() -> instance.increasing());
         th1.start();
         
-        Thread th2 = new Thread(() -> instance.decreasing());
+        Thread th2 = new Thread(() -> instance.decreasing());// not protected
         th2.start();
         
-        Thread th3 = new Thread(() -> instance.decreasing());
+        Thread th3 = new Thread(() -> instance.decreasing());// not protected
         th3.start();
         
         try
