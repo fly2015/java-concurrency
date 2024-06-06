@@ -1,0 +1,36 @@
+Java Concurrency and Multithreading
+	Thread
+	CPU cores/threads
+	Fairness
+	User Experience
+		- Responsiveness
+		- Fairness
+		
+	Multitasking(processes)
+		switching
+		
+	Multithreading	
+		increase the performance
+		reading and writing the same memory simultaneously.
+		
+		 the right precautions
+		 to control how threads access shared resources like memory, files, databases etc.
+
+Java Concurrency and Multithreading
+	Thread
+	CPU cores/threads
+	Fairness
+	User Experience
+		- Responsiveness
+		- Fairness
+		
+	Multitasking(processes)
+		switching
+		
+	Multithreading	
+		increase the performance
+		reading and writing the same memory simultaneously.
+		
+		 the right precautions
+		 	to control how threads access shared resources like memory, files, databases etc.
+		 			 	

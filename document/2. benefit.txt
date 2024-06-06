@@ -1,0 +1,13 @@
+Concurrency Models
+	1. shared state example model: multiple threads executing within the same application would also share objects
+	2. shared nothing/separate state
+	Netty, Vert.x and Play / Akka and Qbit 
+	LMax Disrupter
+	
+	New functional programming parallelism
+		- Fork and Join framework in Java 7
+		- the collections streams API in Java 8.
+	
+	
+	
+	
